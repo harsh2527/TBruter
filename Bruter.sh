@@ -41,10 +41,10 @@ sleep 1
 start
 else
 default_test_pass="passwords.lst"
-read -p $'\e[1;92mPassword List (Enter to default list): \e[0m' test_pass
+read -p $'\e[1;92mPassword List (Press Enter to use default list): \e[0m' test_pass
 test_pass="${test_pass:-${default_test_pass}}"
 default_threads="10"
-read -p $'\e[1;92mThreads (Use < 20, Default 10): \e[0m' threads
+read -p $'\e[1;92mThreads (Use < 20): \e[0m' threads
 threads="${threads:-${default_threads}}"
 fi
 }
@@ -103,8 +103,8 @@ function bruteforcer() {
 uagent="Mozilla/5.0 (Series40; NokiaX2-02/10.90; Profile/MIDP-2.1 Configuration/CLDC-1.1) Gecko/20100401 S40OviBrowser/1.0.2.26.11"
 #checktor
 count_pass=$(wc -l $test_pass | cut -d " " -f1)
-printf "\e[1;92mUsername:\e[0m\e[1;77m %s\e[0m\n" $username
-printf "\e[1;92mWordlist:\e[0m\e[1;77m %s (%s)\e[0m\n" $test_pass $count_pass
+printf "\e[1;92mEnter Username:\e[0m\e[1;77m %s\e[0m\n" $username
+printf "\e[1;92mPath for custom Wordlist:\e[0m\e[1;77m %s (%s)\e[0m\n" $test_pass $count_pass
 printf "\e[1;91m[*] Press Ctrl + C to stop or save session\n\e[0m"
 token=0
 startline=1
