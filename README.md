@@ -33,3 +33,6 @@ sudo ./Bruter.sh
 chmod +x requirements.sh
 sudo ./requirements.sh
 ```
+
+
+This is only for educational purpose author takes no responsibility of your acts kindly refer the law in your region regarding this. conatact Harmhacker@protonmail.com
